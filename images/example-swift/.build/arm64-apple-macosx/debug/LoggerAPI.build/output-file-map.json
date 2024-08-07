@@ -1,0 +1,11 @@
+{
+  "": {
+    "swift-dependencies": "/Users/briannabeshkin/recruitment-test-data-engineering/images/example-swift/.build/arm64-apple-macosx/debug/LoggerAPI.build/master.swiftdeps"
+  },
+  "/Users/briannabeshkin/recruitment-test-data-engineering/images/example-swift/.build/checkouts/LoggerAPI/Sources/LoggerAPI/Logger.swift": {
+    "dependencies": "/Users/briannabeshkin/recruitment-test-data-engineering/images/example-swift/.build/arm64-apple-macosx/debug/LoggerAPI.build/Logger.d",
+    "object": "/Users/briannabeshkin/recruitment-test-data-engineering/images/example-swift/.build/arm64-apple-macosx/debug/LoggerAPI.build/Logger.swift.o",
+    "swiftmodule": "/Users/briannabeshkin/recruitment-test-data-engineering/images/example-swift/.build/arm64-apple-macosx/debug/LoggerAPI.build/Logger~partial.swiftmodule",
+    "swift-dependencies": "/Users/briannabeshkin/recruitment-test-data-engineering/images/example-swift/.build/arm64-apple-macosx/debug/LoggerAPI.build/Logger.swiftdeps"
+  }
+}

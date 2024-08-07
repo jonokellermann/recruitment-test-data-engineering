@@ -1,13 +1,17 @@
-// swift-tools-version:5.3
 import PackageDescription
 
 let package = Package(
-    name: "example",
+    name: "example-swift",
+    products: [
+        .executable(name: "example-swift", targets: ["example-swift"]),
+    ],
     dependencies: [
-        .package(name: "SwiftKueryORM", url: "https://github.com/Kitura/Swift-Kuery-ORM.git", from: "0.6.1"),
-        .package(url: "https://github.com/IBM-Swift/SwiftKueryMySQL.git", from: "2.0.2")
+        .package(url: "https://github.com/Kitura/Swift-Kuery.git", from: "3.0.0"),
+        .package(url: "https://github.com/Kitura/Swift-Kuery-MySQL.git", from: "3.0.0"),
     ],
     targets: [
-        .target(name: "example", dependencies: ["SwiftKueryORM", "SwiftKueryMySQL"]),
+        .target(
+            name: "example-swift",
+            dependencies: ["SwiftKuery", "SwiftKueryMySQL"]),
     ]
 )

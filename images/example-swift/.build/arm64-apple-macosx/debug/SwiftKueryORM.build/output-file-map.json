@@ -1,0 +1,41 @@
+{
+  "": {
+    "swift-dependencies": "/Users/briannabeshkin/recruitment-test-data-engineering/images/example-swift/.build/arm64-apple-macosx/debug/SwiftKueryORM.build/master.swiftdeps"
+  },
+  "/Users/briannabeshkin/recruitment-test-data-engineering/images/example-swift/.build/checkouts/Swift-Kuery-ORM/Sources/SwiftKueryORM/Database.swift": {
+    "dependencies": "/Users/briannabeshkin/recruitment-test-data-engineering/images/example-swift/.build/arm64-apple-macosx/debug/SwiftKueryORM.build/Database.d",
+    "object": "/Users/briannabeshkin/recruitment-test-data-engineering/images/example-swift/.build/arm64-apple-macosx/debug/SwiftKueryORM.build/Database.swift.o",
+    "swiftmodule": "/Users/briannabeshkin/recruitment-test-data-engineering/images/example-swift/.build/arm64-apple-macosx/debug/SwiftKueryORM.build/Database~partial.swiftmodule",
+    "swift-dependencies": "/Users/briannabeshkin/recruitment-test-data-engineering/images/example-swift/.build/arm64-apple-macosx/debug/SwiftKueryORM.build/Database.swiftdeps"
+  },
+  "/Users/briannabeshkin/recruitment-test-data-engineering/images/example-swift/.build/checkouts/Swift-Kuery-ORM/Sources/SwiftKueryORM/DatabaseDecoder.swift": {
+    "dependencies": "/Users/briannabeshkin/recruitment-test-data-engineering/images/example-swift/.build/arm64-apple-macosx/debug/SwiftKueryORM.build/DatabaseDecoder.d",
+    "object": "/Users/briannabeshkin/recruitment-test-data-engineering/images/example-swift/.build/arm64-apple-macosx/debug/SwiftKueryORM.build/DatabaseDecoder.swift.o",
+    "swiftmodule": "/Users/briannabeshkin/recruitment-test-data-engineering/images/example-swift/.build/arm64-apple-macosx/debug/SwiftKueryORM.build/DatabaseDecoder~partial.swiftmodule",
+    "swift-dependencies": "/Users/briannabeshkin/recruitment-test-data-engineering/images/example-swift/.build/arm64-apple-macosx/debug/SwiftKueryORM.build/DatabaseDecoder.swiftdeps"
+  },
+  "/Users/briannabeshkin/recruitment-test-data-engineering/images/example-swift/.build/checkouts/Swift-Kuery-ORM/Sources/SwiftKueryORM/DatabaseEncoder.swift": {
+    "dependencies": "/Users/briannabeshkin/recruitment-test-data-engineering/images/example-swift/.build/arm64-apple-macosx/debug/SwiftKueryORM.build/DatabaseEncoder.d",
+    "object": "/Users/briannabeshkin/recruitment-test-data-engineering/images/example-swift/.build/arm64-apple-macosx/debug/SwiftKueryORM.build/DatabaseEncoder.swift.o",
+    "swiftmodule": "/Users/briannabeshkin/recruitment-test-data-engineering/images/example-swift/.build/arm64-apple-macosx/debug/SwiftKueryORM.build/DatabaseEncoder~partial.swiftmodule",
+    "swift-dependencies": "/Users/briannabeshkin/recruitment-test-data-engineering/images/example-swift/.build/arm64-apple-macosx/debug/SwiftKueryORM.build/DatabaseEncoder.swiftdeps"
+  },
+  "/Users/briannabeshkin/recruitment-test-data-engineering/images/example-swift/.build/checkouts/Swift-Kuery-ORM/Sources/SwiftKueryORM/Model.swift": {
+    "dependencies": "/Users/briannabeshkin/recruitment-test-data-engineering/images/example-swift/.build/arm64-apple-macosx/debug/SwiftKueryORM.build/Model.d",
+    "object": "/Users/briannabeshkin/recruitment-test-data-engineering/images/example-swift/.build/arm64-apple-macosx/debug/SwiftKueryORM.build/Model.swift.o",
+    "swiftmodule": "/Users/briannabeshkin/recruitment-test-data-engineering/images/example-swift/.build/arm64-apple-macosx/debug/SwiftKueryORM.build/Model~partial.swiftmodule",
+    "swift-dependencies": "/Users/briannabeshkin/recruitment-test-data-engineering/images/example-swift/.build/arm64-apple-macosx/debug/SwiftKueryORM.build/Model.swiftdeps"
+  },
+  "/Users/briannabeshkin/recruitment-test-data-engineering/images/example-swift/.build/checkouts/Swift-Kuery-ORM/Sources/SwiftKueryORM/TableInfo.swift": {
+    "dependencies": "/Users/briannabeshkin/recruitment-test-data-engineering/images/example-swift/.build/arm64-apple-macosx/debug/SwiftKueryORM.build/TableInfo.d",
+    "object": "/Users/briannabeshkin/recruitment-test-data-engineering/images/example-swift/.build/arm64-apple-macosx/debug/SwiftKueryORM.build/TableInfo.swift.o",
+    "swiftmodule": "/Users/briannabeshkin/recruitment-test-data-engineering/images/example-swift/.build/arm64-apple-macosx/debug/SwiftKueryORM.build/TableInfo~partial.swiftmodule",
+    "swift-dependencies": "/Users/briannabeshkin/recruitment-test-data-engineering/images/example-swift/.build/arm64-apple-macosx/debug/SwiftKueryORM.build/TableInfo.swiftdeps"
+  },
+  "/Users/briannabeshkin/recruitment-test-data-engineering/images/example-swift/.build/checkouts/Swift-Kuery-ORM/Sources/SwiftKueryORM/TypeAliases.swift": {
+    "dependencies": "/Users/briannabeshkin/recruitment-test-data-engineering/images/example-swift/.build/arm64-apple-macosx/debug/SwiftKueryORM.build/TypeAliases.d",
+    "object": "/Users/briannabeshkin/recruitment-test-data-engineering/images/example-swift/.build/arm64-apple-macosx/debug/SwiftKueryORM.build/TypeAliases.swift.o",
+    "swiftmodule": "/Users/briannabeshkin/recruitment-test-data-engineering/images/example-swift/.build/arm64-apple-macosx/debug/SwiftKueryORM.build/TypeAliases~partial.swiftmodule",
+    "swift-dependencies": "/Users/briannabeshkin/recruitment-test-data-engineering/images/example-swift/.build/arm64-apple-macosx/debug/SwiftKueryORM.build/TypeAliases.swiftdeps"
+  }
+}

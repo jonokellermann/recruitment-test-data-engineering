@@ -1,0 +1,4 @@
+module TypeDecoder {
+    header "/Users/briannabeshkin/recruitment-test-data-engineering/images/example-swift/.build/arm64-apple-macosx/debug/TypeDecoder.build/TypeDecoder-Swift.h"
+    requires objc
+}

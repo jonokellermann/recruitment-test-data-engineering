@@ -1,0 +1,23 @@
+{
+  "": {
+    "swift-dependencies": "/Users/briannabeshkin/recruitment-test-data-engineering/images/example-swift/.build/arm64-apple-macosx/debug/SwiftKueryMySQL.build/master.swiftdeps"
+  },
+  "/Users/briannabeshkin/recruitment-test-data-engineering/images/example-swift/.build/checkouts/SwiftKueryMySQL/Sources/SwiftKueryMySQL/MySQLConnection.swift": {
+    "dependencies": "/Users/briannabeshkin/recruitment-test-data-engineering/images/example-swift/.build/arm64-apple-macosx/debug/SwiftKueryMySQL.build/MySQLConnection.d",
+    "object": "/Users/briannabeshkin/recruitment-test-data-engineering/images/example-swift/.build/arm64-apple-macosx/debug/SwiftKueryMySQL.build/MySQLConnection.swift.o",
+    "swiftmodule": "/Users/briannabeshkin/recruitment-test-data-engineering/images/example-swift/.build/arm64-apple-macosx/debug/SwiftKueryMySQL.build/MySQLConnection~partial.swiftmodule",
+    "swift-dependencies": "/Users/briannabeshkin/recruitment-test-data-engineering/images/example-swift/.build/arm64-apple-macosx/debug/SwiftKueryMySQL.build/MySQLConnection.swiftdeps"
+  },
+  "/Users/briannabeshkin/recruitment-test-data-engineering/images/example-swift/.build/checkouts/SwiftKueryMySQL/Sources/SwiftKueryMySQL/MySQLPreparedStatement.swift": {
+    "dependencies": "/Users/briannabeshkin/recruitment-test-data-engineering/images/example-swift/.build/arm64-apple-macosx/debug/SwiftKueryMySQL.build/MySQLPreparedStatement.d",
+    "object": "/Users/briannabeshkin/recruitment-test-data-engineering/images/example-swift/.build/arm64-apple-macosx/debug/SwiftKueryMySQL.build/MySQLPreparedStatement.swift.o",
+    "swiftmodule": "/Users/briannabeshkin/recruitment-test-data-engineering/images/example-swift/.build/arm64-apple-macosx/debug/SwiftKueryMySQL.build/MySQLPreparedStatement~partial.swiftmodule",
+    "swift-dependencies": "/Users/briannabeshkin/recruitment-test-data-engineering/images/example-swift/.build/arm64-apple-macosx/debug/SwiftKueryMySQL.build/MySQLPreparedStatement.swiftdeps"
+  },
+  "/Users/briannabeshkin/recruitment-test-data-engineering/images/example-swift/.build/checkouts/SwiftKueryMySQL/Sources/SwiftKueryMySQL/MySQLResultFetcher.swift": {
+    "dependencies": "/Users/briannabeshkin/recruitment-test-data-engineering/images/example-swift/.build/arm64-apple-macosx/debug/SwiftKueryMySQL.build/MySQLResultFetcher.d",
+    "object": "/Users/briannabeshkin/recruitment-test-data-engineering/images/example-swift/.build/arm64-apple-macosx/debug/SwiftKueryMySQL.build/MySQLResultFetcher.swift.o",
+    "swiftmodule": "/Users/briannabeshkin/recruitment-test-data-engineering/images/example-swift/.build/arm64-apple-macosx/debug/SwiftKueryMySQL.build/MySQLResultFetcher~partial.swiftmodule",
+    "swift-dependencies": "/Users/briannabeshkin/recruitment-test-data-engineering/images/example-swift/.build/arm64-apple-macosx/debug/SwiftKueryMySQL.build/MySQLResultFetcher.swiftdeps"
+  }
+}

@@ -1,0 +1,4 @@
+module SwiftKuery {
+    header "/Users/briannabeshkin/recruitment-test-data-engineering/images/example-swift/.build/arm64-apple-macosx/debug/SwiftKuery.build/SwiftKuery-Swift.h"
+    requires objc
+}

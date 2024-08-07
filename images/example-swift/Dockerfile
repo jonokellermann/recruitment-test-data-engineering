@@ -10,3 +10,4 @@ RUN swift package resolve
 
 COPY . .
 RUN swift build
+CMD ["swift", "run"]

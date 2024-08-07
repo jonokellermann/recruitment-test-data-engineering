@@ -1,0 +1,17 @@
+{
+  "": {
+    "swift-dependencies": "/Users/briannabeshkin/recruitment-test-data-engineering/images/example-swift/.build/arm64-apple-macosx/debug/TypeDecoder.build/master.swiftdeps"
+  },
+  "/Users/briannabeshkin/recruitment-test-data-engineering/images/example-swift/.build/checkouts/TypeDecoder/Sources/TypeDecoder/OrderedDictionary.swift": {
+    "dependencies": "/Users/briannabeshkin/recruitment-test-data-engineering/images/example-swift/.build/arm64-apple-macosx/debug/TypeDecoder.build/OrderedDictionary.d",
+    "object": "/Users/briannabeshkin/recruitment-test-data-engineering/images/example-swift/.build/arm64-apple-macosx/debug/TypeDecoder.build/OrderedDictionary.swift.o",
+    "swiftmodule": "/Users/briannabeshkin/recruitment-test-data-engineering/images/example-swift/.build/arm64-apple-macosx/debug/TypeDecoder.build/OrderedDictionary~partial.swiftmodule",
+    "swift-dependencies": "/Users/briannabeshkin/recruitment-test-data-engineering/images/example-swift/.build/arm64-apple-macosx/debug/TypeDecoder.build/OrderedDictionary.swiftdeps"
+  },
+  "/Users/briannabeshkin/recruitment-test-data-engineering/images/example-swift/.build/checkouts/TypeDecoder/Sources/TypeDecoder/TypeDecoder.swift": {
+    "dependencies": "/Users/briannabeshkin/recruitment-test-data-engineering/images/example-swift/.build/arm64-apple-macosx/debug/TypeDecoder.build/TypeDecoder.d",
+    "object": "/Users/briannabeshkin/recruitment-test-data-engineering/images/example-swift/.build/arm64-apple-macosx/debug/TypeDecoder.build/TypeDecoder.swift.o",
+    "swiftmodule": "/Users/briannabeshkin/recruitment-test-data-engineering/images/example-swift/.build/arm64-apple-macosx/debug/TypeDecoder.build/TypeDecoder~partial.swiftmodule",
+    "swift-dependencies": "/Users/briannabeshkin/recruitment-test-data-engineering/images/example-swift/.build/arm64-apple-macosx/debug/TypeDecoder.build/TypeDecoder.swiftdeps"
+  }
+}

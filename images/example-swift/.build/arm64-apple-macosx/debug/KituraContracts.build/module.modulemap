@@ -1,0 +1,4 @@
+module KituraContracts {
+    header "/Users/briannabeshkin/recruitment-test-data-engineering/images/example-swift/.build/arm64-apple-macosx/debug/KituraContracts.build/KituraContracts-Swift.h"
+    requires objc
+}

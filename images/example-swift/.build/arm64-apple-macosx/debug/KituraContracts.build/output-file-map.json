@@ -1,0 +1,59 @@
+{
+  "": {
+    "swift-dependencies": "/Users/briannabeshkin/recruitment-test-data-engineering/images/example-swift/.build/arm64-apple-macosx/debug/KituraContracts.build/master.swiftdeps"
+  },
+  "/Users/briannabeshkin/recruitment-test-data-engineering/images/example-swift/.build/checkouts/KituraContracts/Sources/KituraContracts/BodyDecoder.swift": {
+    "dependencies": "/Users/briannabeshkin/recruitment-test-data-engineering/images/example-swift/.build/arm64-apple-macosx/debug/KituraContracts.build/BodyDecoder.d",
+    "object": "/Users/briannabeshkin/recruitment-test-data-engineering/images/example-swift/.build/arm64-apple-macosx/debug/KituraContracts.build/BodyDecoder.swift.o",
+    "swiftmodule": "/Users/briannabeshkin/recruitment-test-data-engineering/images/example-swift/.build/arm64-apple-macosx/debug/KituraContracts.build/BodyDecoder~partial.swiftmodule",
+    "swift-dependencies": "/Users/briannabeshkin/recruitment-test-data-engineering/images/example-swift/.build/arm64-apple-macosx/debug/KituraContracts.build/BodyDecoder.swiftdeps"
+  },
+  "/Users/briannabeshkin/recruitment-test-data-engineering/images/example-swift/.build/checkouts/KituraContracts/Sources/KituraContracts/BodyEncoder.swift": {
+    "dependencies": "/Users/briannabeshkin/recruitment-test-data-engineering/images/example-swift/.build/arm64-apple-macosx/debug/KituraContracts.build/BodyEncoder.d",
+    "object": "/Users/briannabeshkin/recruitment-test-data-engineering/images/example-swift/.build/arm64-apple-macosx/debug/KituraContracts.build/BodyEncoder.swift.o",
+    "swiftmodule": "/Users/briannabeshkin/recruitment-test-data-engineering/images/example-swift/.build/arm64-apple-macosx/debug/KituraContracts.build/BodyEncoder~partial.swiftmodule",
+    "swift-dependencies": "/Users/briannabeshkin/recruitment-test-data-engineering/images/example-swift/.build/arm64-apple-macosx/debug/KituraContracts.build/BodyEncoder.swiftdeps"
+  },
+  "/Users/briannabeshkin/recruitment-test-data-engineering/images/example-swift/.build/checkouts/KituraContracts/Sources/KituraContracts/BodyFormat.swift": {
+    "dependencies": "/Users/briannabeshkin/recruitment-test-data-engineering/images/example-swift/.build/arm64-apple-macosx/debug/KituraContracts.build/BodyFormat.d",
+    "object": "/Users/briannabeshkin/recruitment-test-data-engineering/images/example-swift/.build/arm64-apple-macosx/debug/KituraContracts.build/BodyFormat.swift.o",
+    "swiftmodule": "/Users/briannabeshkin/recruitment-test-data-engineering/images/example-swift/.build/arm64-apple-macosx/debug/KituraContracts.build/BodyFormat~partial.swiftmodule",
+    "swift-dependencies": "/Users/briannabeshkin/recruitment-test-data-engineering/images/example-swift/.build/arm64-apple-macosx/debug/KituraContracts.build/BodyFormat.swiftdeps"
+  },
+  "/Users/briannabeshkin/recruitment-test-data-engineering/images/example-swift/.build/checkouts/KituraContracts/Sources/KituraContracts/ClosureAliases.swift": {
+    "dependencies": "/Users/briannabeshkin/recruitment-test-data-engineering/images/example-swift/.build/arm64-apple-macosx/debug/KituraContracts.build/ClosureAliases.d",
+    "object": "/Users/briannabeshkin/recruitment-test-data-engineering/images/example-swift/.build/arm64-apple-macosx/debug/KituraContracts.build/ClosureAliases.swift.o",
+    "swiftmodule": "/Users/briannabeshkin/recruitment-test-data-engineering/images/example-swift/.build/arm64-apple-macosx/debug/KituraContracts.build/ClosureAliases~partial.swiftmodule",
+    "swift-dependencies": "/Users/briannabeshkin/recruitment-test-data-engineering/images/example-swift/.build/arm64-apple-macosx/debug/KituraContracts.build/ClosureAliases.swiftdeps"
+  },
+  "/Users/briannabeshkin/recruitment-test-data-engineering/images/example-swift/.build/checkouts/KituraContracts/Sources/KituraContracts/CodableQuery/Coder.swift": {
+    "dependencies": "/Users/briannabeshkin/recruitment-test-data-engineering/images/example-swift/.build/arm64-apple-macosx/debug/KituraContracts.build/Coder.d",
+    "object": "/Users/briannabeshkin/recruitment-test-data-engineering/images/example-swift/.build/arm64-apple-macosx/debug/KituraContracts.build/Coder.swift.o",
+    "swiftmodule": "/Users/briannabeshkin/recruitment-test-data-engineering/images/example-swift/.build/arm64-apple-macosx/debug/KituraContracts.build/Coder~partial.swiftmodule",
+    "swift-dependencies": "/Users/briannabeshkin/recruitment-test-data-engineering/images/example-swift/.build/arm64-apple-macosx/debug/KituraContracts.build/Coder.swiftdeps"
+  },
+  "/Users/briannabeshkin/recruitment-test-data-engineering/images/example-swift/.build/checkouts/KituraContracts/Sources/KituraContracts/CodableQuery/Extensions.swift": {
+    "dependencies": "/Users/briannabeshkin/recruitment-test-data-engineering/images/example-swift/.build/arm64-apple-macosx/debug/KituraContracts.build/Extensions.d",
+    "object": "/Users/briannabeshkin/recruitment-test-data-engineering/images/example-swift/.build/arm64-apple-macosx/debug/KituraContracts.build/Extensions.swift.o",
+    "swiftmodule": "/Users/briannabeshkin/recruitment-test-data-engineering/images/example-swift/.build/arm64-apple-macosx/debug/KituraContracts.build/Extensions~partial.swiftmodule",
+    "swift-dependencies": "/Users/briannabeshkin/recruitment-test-data-engineering/images/example-swift/.build/arm64-apple-macosx/debug/KituraContracts.build/Extensions.swiftdeps"
+  },
+  "/Users/briannabeshkin/recruitment-test-data-engineering/images/example-swift/.build/checkouts/KituraContracts/Sources/KituraContracts/CodableQuery/QueryDecoder.swift": {
+    "dependencies": "/Users/briannabeshkin/recruitment-test-data-engineering/images/example-swift/.build/arm64-apple-macosx/debug/KituraContracts.build/QueryDecoder.d",
+    "object": "/Users/briannabeshkin/recruitment-test-data-engineering/images/example-swift/.build/arm64-apple-macosx/debug/KituraContracts.build/QueryDecoder.swift.o",
+    "swiftmodule": "/Users/briannabeshkin/recruitment-test-data-engineering/images/example-swift/.build/arm64-apple-macosx/debug/KituraContracts.build/QueryDecoder~partial.swiftmodule",
+    "swift-dependencies": "/Users/briannabeshkin/recruitment-test-data-engineering/images/example-swift/.build/arm64-apple-macosx/debug/KituraContracts.build/QueryDecoder.swiftdeps"
+  },
+  "/Users/briannabeshkin/recruitment-test-data-engineering/images/example-swift/.build/checkouts/KituraContracts/Sources/KituraContracts/CodableQuery/QueryEncoder.swift": {
+    "dependencies": "/Users/briannabeshkin/recruitment-test-data-engineering/images/example-swift/.build/arm64-apple-macosx/debug/KituraContracts.build/QueryEncoder.d",
+    "object": "/Users/briannabeshkin/recruitment-test-data-engineering/images/example-swift/.build/arm64-apple-macosx/debug/KituraContracts.build/QueryEncoder.swift.o",
+    "swiftmodule": "/Users/briannabeshkin/recruitment-test-data-engineering/images/example-swift/.build/arm64-apple-macosx/debug/KituraContracts.build/QueryEncoder~partial.swiftmodule",
+    "swift-dependencies": "/Users/briannabeshkin/recruitment-test-data-engineering/images/example-swift/.build/arm64-apple-macosx/debug/KituraContracts.build/QueryEncoder.swiftdeps"
+  },
+  "/Users/briannabeshkin/recruitment-test-data-engineering/images/example-swift/.build/checkouts/KituraContracts/Sources/KituraContracts/Contracts.swift": {
+    "dependencies": "/Users/briannabeshkin/recruitment-test-data-engineering/images/example-swift/.build/arm64-apple-macosx/debug/KituraContracts.build/Contracts.d",
+    "object": "/Users/briannabeshkin/recruitment-test-data-engineering/images/example-swift/.build/arm64-apple-macosx/debug/KituraContracts.build/Contracts.swift.o",
+    "swiftmodule": "/Users/briannabeshkin/recruitment-test-data-engineering/images/example-swift/.build/arm64-apple-macosx/debug/KituraContracts.build/Contracts~partial.swiftmodule",
+    "swift-dependencies": "/Users/briannabeshkin/recruitment-test-data-engineering/images/example-swift/.build/arm64-apple-macosx/debug/KituraContracts.build/Contracts.swiftdeps"
+  }
+}

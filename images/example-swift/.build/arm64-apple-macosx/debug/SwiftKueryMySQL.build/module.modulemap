@@ -1,0 +1,4 @@
+module SwiftKueryMySQL {
+    header "/Users/briannabeshkin/recruitment-test-data-engineering/images/example-swift/.build/arm64-apple-macosx/debug/SwiftKueryMySQL.build/SwiftKueryMySQL-Swift.h"
+    requires objc
+}
