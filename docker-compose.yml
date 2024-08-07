@@ -57,3 +57,10 @@ services:
     command: ["swift", "run"]
     volumes:
       - ./data:/data
+
+  people-places-python:
+    image: people-places-python
+    build: images/people-places-python
+    command: ["./main.py"]
+    volumes:
+      - ./data:/data
