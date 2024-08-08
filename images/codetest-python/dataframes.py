@@ -1,5 +1,6 @@
 """Module containing functions that create dataframes."""
 import pandas as pd
+from helper_funcs import check_empty_pdf
 
 
 def assign_unique_id(unique_value, length_of_id):
@@ -34,6 +35,8 @@ def create_country_pdf(places_csv_path, country_id_length=5):
     """
     # Read places.csv into a Panda DF
     places_pdf = pd.read_csv(places_csv_path, encoding="utf-8")
+    # Check if the dataframe is empty
+    check_empty_pdf(places_pdf)
 
     # Create a dataframe for unique country and its country_id
     country_pdf = pd.DataFrame(places_pdf["country"].unique(), columns=["country_name"])
@@ -56,6 +59,10 @@ def create_city_pdf(places_csv_path, city_id_length=8):
     """
     # Read places.csv into a Panda DF
     places_pdf = pd.read_csv(places_csv_path, encoding="utf-8")
+
+    # Check if the dataframe is empty
+    check_empty_pdf(places_pdf)
+
     city_pdf = places_pdf.copy().drop_duplicates()
     city_pdf["city_id"] = city_pdf["city"].apply(
         lambda x: assign_unique_id(x, city_id_length)
@@ -82,6 +89,9 @@ def create_people_pdf(people_csv_path, person_id_length=12):
     # Read people.csv into a Panda DF
     people_pdf = pd.read_csv(people_csv_path, encoding="utf-8")
 
+    # Check if the dataframe is empty
+    check_empty_pdf(people_pdf)
+
     # Add an unique id to each record
     people_pdf["person_id_raw"] = (
         people_pdf["given_name"].astype("str")
@@ -106,6 +116,10 @@ def create_fact_table(people_pdf, city_pdf):
     Returns:
         PandasDF
     """
+    # Check if the dataframes are empty
+    check_empty_pdf(people_pdf)
+    check_empty_pdf(city_pdf)
+
     fact_table_pdf = people_pdf.merge(
         city_pdf, how="left", left_on="place_of_birth", right_on="city"
     )

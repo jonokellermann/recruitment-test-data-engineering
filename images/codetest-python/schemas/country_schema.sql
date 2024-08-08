@@ -1,3 +1,4 @@
+/*SQL query for the 'country' table*/
 drop table if exists country;
 
 create table `country` (

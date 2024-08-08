@@ -1,4 +1,4 @@
-/* A SQL script that creates 'people' table with defined schemas. */
+/*SQL query for the 'people' table*/
 drop table if exists people;
 
 create table `people` (

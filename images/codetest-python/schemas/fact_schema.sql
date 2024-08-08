@@ -1,3 +1,5 @@
+/*SQL query for the 'fact' table*/
+
 drop table if exists fact;
 
 create table `fact` (

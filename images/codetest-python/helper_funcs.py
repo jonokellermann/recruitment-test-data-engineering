@@ -48,8 +48,7 @@ def insert_df_into_table(df, table, table_name, connection):
     Returns:
       None
     """
-    if len(df) == 0:
-        raise ValueError("Dataframe is empty. Nothing to insert")
+    check_empty_pdf(df)
 
     logging.info(f"Inserting data into table '{table_name}'")
     for index, row in df.iterrows():
@@ -59,3 +58,16 @@ def insert_df_into_table(df, table, table_name, connection):
             connection.execute(instance)
         except Exception as ex:
             logging.info(f"Error inserting row {index}: {str(ex)}")
+
+
+def check_empty_pdf(pdf):
+    """Check if a Pandas dataframe is empty.
+
+    Args:
+        pdf (PandasDF): A Pandas dataframe
+
+    Returns:
+        Raises ValueError: when the dataframe is empty.
+    """
+    if len(pdf) == 0:
+        raise ValueError("Dataframe is empty.")

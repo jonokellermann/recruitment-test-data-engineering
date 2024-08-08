@@ -1,3 +1,4 @@
+/*SQL query for the 'city' table*/
 drop table if exists city;
 
 create table `city` (
