@@ -5,8 +5,8 @@ WORKDIR /app
 COPY requirements.txt .
 COPY main.py .
 COPY helper_funcs.py .
-COPY people_schema.sql .
-COPY places_schema.sql .
+COPY dataframes.py .
+COPY schemas/ .
 
 RUN pip install -r requirements.txt
 

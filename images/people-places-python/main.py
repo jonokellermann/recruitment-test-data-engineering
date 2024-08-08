@@ -1,10 +1,15 @@
 #!/usr/bin/env python
-import pandas as pd
 import json
 import sqlalchemy
-import uuid
+from sqlalchemy import text
 
 from helper_funcs import create_table_object_from_sql_script, insert_df_into_table
+from dataframes import (
+    create_country_pdf,
+    create_city_pdf,
+    create_people_pdf,
+    create_fact_table,
+)
 
 if __name__ == "__main__":
     # connect to the database:
@@ -13,7 +18,23 @@ if __name__ == "__main__":
 
     metadata = sqlalchemy.schema.MetaData(engine)
 
-    # Create two tables: people and places
+    # Create 4 tables
+    Country = create_table_object_from_sql_script(
+        schema_sql_path="country_schema.sql",
+        table_name="country",
+        connection=connection,
+        metadata=metadata,
+        engine=engine,
+    )
+
+    City = create_table_object_from_sql_script(
+        schema_sql_path="city_schema.sql",
+        table_name="city",
+        connection=connection,
+        metadata=metadata,
+        engine=engine,
+    )
+
     People = create_table_object_from_sql_script(
         schema_sql_path="people_schema.sql",
         table_name="people",
@@ -22,30 +43,44 @@ if __name__ == "__main__":
         engine=engine,
     )
 
-    Places = create_table_object_from_sql_script(
-        schema_sql_path="places_schema.sql",
-        table_name="places",
+    Fact = create_table_object_from_sql_script(
+        schema_sql_path="fact_schema.sql",
+        table_name="fact",
         connection=connection,
         metadata=metadata,
         engine=engine,
     )
 
-    # read and insert the people.csv data file into the table
-    people_pdf = pd.read_csv("/data/people.csv")
-    # add an unique identifier column, used as a primary key
-    people_pdf["id"] = [str(uuid.uuid4()) for _ in range(len(people_pdf))]
-    insert_df_into_table(df=people_pdf, table=People, connection=connection)
-
-    # read and insert the places.csv data file into the table
-    places_pdf = pd.read_csv("/data/places.csv")
-    insert_df_into_table(df=places_pdf, table=Places, connection=connection)
-
-    # Get number of people by country
-    joined_pdf = places_pdf.merge(
-        people_pdf, how="left", left_on="city", right_on="place_of_birth"
+    country_pdf = create_country_pdf(places_csv_path="/data/places.csv")
+    insert_df_into_table(
+        df=country_pdf, table=Country, table_name="country", connection=connection
     )
-    result = joined_pdf.groupby("country").agg({"id": "nunique"}).to_dict()["id"]
 
-    # output the table to a JSON file
-    with open("/data/people_by_country.json", "w") as json_file:
-        json.dump(result, json_file)
+    city_pdf = create_city_pdf(places_csv_path="/data/places.csv")
+    insert_df_into_table(
+        df=city_pdf, table=City, table_name="city", connection=connection
+    )
+
+    people_pdf = create_people_pdf(people_csv_path="/data/people.csv")
+    insert_df_into_table(
+        df=people_pdf, table=People, table_name="people", connection=connection
+    )
+
+    fact_pdf = create_fact_table(people_pdf, city_pdf)
+    insert_df_into_table(
+        df=fact_pdf, table=Fact, table_name="fact", connection=connection
+    )
+
+    # # output the person count per country to a JSON file
+    with open("/data/summary_output.json", "w") as json_file:
+        query = """
+        SELECT country_name, count(distinct person_id) person_count
+        FROM fact JOIN country ON fact.country_id = country.country_id
+        GROUP BY country_name
+        ORDER BY country_name
+        """
+        rows = connection.execute(text(query)).fetchall()
+        result_dict = {}
+        for row in rows:
+            result_dict.update({row[0]: row[1]})
+        json.dump(result_dict, json_file)
