@@ -58,9 +58,9 @@ services:
     volumes:
       - ./data:/data
 
-  people-places-python:
-    image: people-places-python
-    build: images/people-places-python
+  codetest-python:
+    image: codetest-python
+    build: images/codetest-python
     command: ["./main.py"]
     volumes:
       - ./data:/data
