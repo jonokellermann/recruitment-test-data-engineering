@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+
 import pandas as pd
 import mysql.connector
 import json
