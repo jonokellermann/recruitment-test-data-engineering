@@ -1,4 +1,4 @@
-# Technical assessment for data engineering candidates 
+# Technical assessment for data engineering candidates
 
 ## Purpose
 
