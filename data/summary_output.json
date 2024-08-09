@@ -1,0 +1,340 @@
+{
+  "country_summary": {
+    "Scotland": 8048,
+    "Northern Ireland": 1952
+  },
+  "birth_years_summary": {
+    "Scotland": {
+      "1840-1844": 202,
+      "1895-1899": 321,
+      "1880-1884": 330,
+      "1890-1894": 295,
+      "1975-1979": 265,
+      "1910-1914": 315,
+      "1955-1959": 272,
+      "1945-1949": 290,
+      "1860-1864": 231,
+      "1980-1984": 207,
+      "1850-1854": 226,
+      "1875-1879": 330,
+      "1925-1929": 222,
+      "1950-1954": 267,
+      "1915-1919": 261,
+      "1970-1974": 291,
+      "1935-1939": 218,
+      "1870-1874": 311,
+      "1920-1924": 298,
+      "1900-1904": 358,
+      "1865-1869": 295,
+      "1965-1969": 326,
+      "1905-1909": 344,
+      "1940-1944": 262,
+      "1960-1964": 310,
+      "1930-1934": 203,
+      "1845-1849": 198,
+      "1855-1859": 218,
+      "1885-1889": 301,
+      "1835-1839": 81
+    },
+    "Northern Ireland": {
+      "1980-1984": 60,
+      "1875-1879": 78,
+      "1940-1944": 53,
+      "1895-1899": 84,
+      "1955-1959": 63,
+      "1960-1964": 79,
+      "1890-1894": 91,
+      "1950-1954": 52,
+      "1860-1864": 66,
+      "1880-1884": 84,
+      "1925-1929": 58,
+      "1850-1854": 57,
+      "1905-1909": 68,
+      "1910-1914": 77,
+      "1945-1949": 76,
+      "1865-1869": 76,
+      "1845-1849": 40,
+      "1915-1919": 65,
+      "1885-1889": 77,
+      "1920-1924": 78,
+      "1930-1934": 55,
+      "1855-1859": 54,
+      "1900-1904": 80,
+      "1935-1939": 44,
+      "1965-1969": 67,
+      "1870-1874": 83,
+      "1970-1974": 55,
+      "1975-1979": 72,
+      "1840-1844": 41,
+      "1835-1839": 19
+    }
+  },
+  "county_summary": {
+    "Dumfriesshire": 454,
+    "Roxburghshire": 356,
+    "Down": 554,
+    "Lanarkshire": 783,
+    "Antrim": 554,
+    "Ayrshire": 415,
+    "Fermanagh": 77,
+    "Stirlingshire": 358,
+    "Moray": 451,
+    "Shetland": 96,
+    "Kirkcudbrightshire": 89,
+    "West Lothian": 263,
+    "East Lothian": 171,
+    "Renfrewshire": 330,
+    "Peeblesshire": 96,
+    "Banffshire": 183,
+    "Wigtownshire": 171,
+    "Selkirkshire": 94,
+    "Fife": 540,
+    "Caithness": 194,
+    "Tyrone": 331,
+    "Angus": 479,
+    "Nairn": 97,
+    "Sutherland": 101,
+    "Armagh": 289,
+    "Dunbartonshire": 469,
+    "Ross and Cromarty": 245,
+    "Kincardineshire": 82,
+    "Aberdeenshire": 422,
+    "Kinross-shire": 98,
+    "Clackmannanshire": 157,
+    "Midlothian": 167,
+    "Buteshire": 91,
+    "Orkney": 88,
+    "Londonderry": 147,
+    "Perthshire": 246,
+    "Inverness-shire": 71,
+    "Argyll": 191
+  },
+  "city_summary": {
+    "Dumfries": 107,
+    "Kelso": 99,
+    "Dromore": 85,
+    "Hamilton": 79,
+    "Ballymoney": 88,
+    "Kilmarnock": 73,
+    "Newtownards": 91,
+    "Enniskillen": 77,
+    "Stirling": 90,
+    "Jedburgh": 90,
+    "Elgin": 87,
+    "Lerwick": 96,
+    "Castle Douglas": 89,
+    "West Calder": 94,
+    "Glasgow": 102,
+    "Dalbeattie": 83,
+    "Musselburgh": 82,
+    "Port Glasgow": 86,
+    "Peebles": 96,
+    "Paisley": 67,
+    "Dufftown": 82,
+    "Langholm": 96,
+    "Buckie": 87,
+    "Stranraer": 98,
+    "Selkirk": 94,
+    "Lockerbie": 76,
+    "Kirkcaldy": 95,
+    "Thurso": 99,
+    "Strabane": 81,
+    "Haddington": 89,
+    "Bellshill": 69,
+    "Brechin": 86,
+    "Nairn": 97,
+    "Golspie": 101,
+    "Wick": 95,
+    "Airdrie": 81,
+    "St Andrews": 87,
+    "Keith": 112,
+    "Armagh": 88,
+    "Linlithgow": 91,
+    "Milngavie": 103,
+    "Montrose": 80,
+    "Dingwall": 86,
+    "Stonehaven": 82,
+    "Carrickfergus": 95,
+    "Belfast": 88,
+    "Grantown-on-Spey": 82,
+    "Stornoway": 84,
+    "Aberdeen": 109,
+    "Kinross": 98,
+    "Falkirk": 94,
+    "Barrhead": 89,
+    "Alloa": 69,
+    "Banff": 96,
+    "Forres": 88,
+    "Dundee": 75,
+    "Dungannon": 75,
+    "Dalkeith": 86,
+    "Invergordon": 75,
+    "Omagh": 86,
+    "Coatbridge": 92,
+    "Annan": 92,
+    "Rothesay": 91,
+    "Galashiels": 93,
+    "Dalry": 86,
+    "Cupar": 86,
+    "Carluke": 92,
+    "Helensburgh": 101,
+    "Kirkwall": 88,
+    "Cookstown": 89,
+    "Fraserburgh": 81,
+    "Londonderry": 73,
+    "Dumbarton": 88,
+    "Downpatrick": 98,
+    "Motherwell": 89,
+    "Portadown": 101,
+    "Blairgowrie": 77,
+    "Inverness": 71,
+    "Larne": 96,
+    "Banbridge": 91,
+    "Lisburn": 99,
+    "Bridge of Allan": 96,
+    "Kilsyth": 78,
+    "Lanark": 93,
+    "Tillicoultry": 88,
+    "Ayr": 90,
+    "Arbroath": 76,
+    "Kirkintilloch": 82,
+    "Coleraine": 74,
+    "Bathgate": 78,
+    "Edinburgh": 81,
+    "Forfar": 89,
+    "Huntly": 78,
+    "Kirriemuir": 73,
+    "Portsoy": 80,
+    "Wishaw": 86,
+    "Hawick": 74,
+    "Dunfermline": 93,
+    "Peterhead": 74,
+    "Leven": 88,
+    "Anstruther": 91,
+    "Crieff": 80,
+    "Campbeltown": 114,
+    "Irvine": 64,
+    "Bangor": 101,
+    "Newry": 88,
+    "Greenock": 88,
+    "Ballymena": 88,
+    "Clydebank": 95,
+    "Ardrossan": 102,
+    "Lurgan": 100,
+    "Perth": 89,
+    "Oban": 77,
+    "Newton Stewart": 73
+  },
+  "top_given_names": {
+    "John": 453,
+    "William": 368,
+    "Mary": 279,
+    "James": 219,
+    "George": 211,
+    "Thomas": 192,
+    "Elizabeth": 185,
+    "Margaret": 146,
+    "Sarah": 137,
+    "Robert": 135
+  },
+  "top_family_names": {
+    "Smith": 137,
+    "Jones": 107,
+    "Williams": 82,
+    "Davies": 72,
+    "Taylor": 53,
+    "Brown": 51,
+    "Jackson": 46,
+    "Thomas": 44,
+    "Wilson": 41,
+    "Thompson": 41
+  },
+  "top_given_names_by_country": {
+    "Northern Ireland": [
+      {
+        "name": "John",
+        "count": 87
+      },
+      {
+        "name": "William",
+        "count": 77
+      },
+      {
+        "name": "Mary",
+        "count": 58
+      },
+      {
+        "name": "James",
+        "count": 43
+      },
+      {
+        "name": "George",
+        "count": 39
+      },
+      {
+        "name": "Thomas",
+        "count": 39
+      },
+      {
+        "name": "Elizabeth",
+        "count": 37
+      },
+      {
+        "name": "Margaret",
+        "count": 35
+      },
+      {
+        "name": "David",
+        "count": 33
+      },
+      {
+        "name": "Alice",
+        "count": 30
+      }
+    ]
+  },
+  "top_family_names_by_country": {
+    "Northern Ireland": [
+      {
+        "name": "Smith",
+        "count": 33
+      },
+      {
+        "name": "Jones",
+        "count": 19
+      },
+      {
+        "name": "Davies",
+        "count": 18
+      },
+      {
+        "name": "Williams",
+        "count": 16
+      },
+      {
+        "name": "Brown",
+        "count": 14
+      },
+      {
+        "name": "Wilson",
+        "count": 14
+      },
+      {
+        "name": "Jackson",
+        "count": 13
+      },
+      {
+        "name": "Hill",
+        "count": 10
+      },
+      {
+        "name": "Evans",
+        "count": 10
+      },
+      {
+        "name": "Walker",
+        "count": 10
+      }
+    ]
+  }
+}

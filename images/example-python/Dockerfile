@@ -1,8 +1,13 @@
-FROM python:3.10
+FROM python:3.9-slim
 
 WORKDIR /app
 
-COPY requirements.txt ./
-RUN pip install --no-cache-dir -r requirements.txt
+COPY ./load_data.py /app/load_data.py
+COPY ./data /data
 
-COPY example.py ./
+COPY wait-for-it.sh /usr/local/bin/wait-for-it.sh
+RUN chmod +x /usr/local/bin/wait-for-it.sh
+
+RUN pip install mysql-connector-python pandas
+
+CMD ["wait-for-it.sh", "database:3306", "--", "python", "/app/load_data.py"]
