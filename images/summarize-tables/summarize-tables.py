@@ -5,7 +5,7 @@ import json
 import sqlalchemy
 
 # connect to the database
-engine = sqlalchemy.create_engine("mysql://codetest:swordfish@database/codetest")
+engine = sqlalchemy.create_engine(os.getenv('MYSQL_CONNECTION_STRING'))
 connection = engine.connect()
 
 metadata = sqlalchemy.schema.MetaData(engine)
