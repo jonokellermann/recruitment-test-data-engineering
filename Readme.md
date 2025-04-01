@@ -1,115 +1,234 @@
-# Technical assessment for data engineering candidates 
+# Data Engineering Technical Assessment Submission
 
-## Purpose
+## Project Overview
 
-This has been adapted from this assessment: https://github.com/findmypast/recruitment-test-data-engineering
+This project implements an ETL (Extract, Transform, Load) pipeline for processing population data. The pipeline extracts data from CSV files, processes them, loads them into a MySQL database, and finally performs an analysis to generate country population statistics. The entire solution is containerized using Docker for easy deployment and execution, with non-persistent database storage for clean runs and configuration file support for flexibility.
 
-It has been designed to showcase your understanding of databases and data processing, together with your aptitude in a programming language of your choice.
+## Architecture
 
-## Prerequisites
+The ETL pipeline consists of four main stages:
 
-- Knowledge of relational databases, including how to create tables, insert data, and query data. For the purpose of this test, we are using MySQL.
-- Knowledge of a programming language, including how to read and write files, process data, and access a MySQL database.
-- Familiarity with Docker for container management, which we use through the Docker Compose tool. You will need Docker and Docker Compose installed on your development machine.
-- Familiarity with Git for source control, and a github.com account which will be used for sharing your code.
-- Zoom, which we will use for the pairing.
+1. **Ingestion (Extract)**: Copies CSV files from a source directory to a destination directory
+2. **Process (Transform)**: Loads the CSV files into MySQL tables with basic cleaning
+3. **Analysis (Load)**: Executes a SQL query to calculate population by country
+4. **Orchestration**: Coordinates the execution of all pipeline stages
 
-We have included example data and programme code. The example schema creates a simple table, with example code in several common programming languages to load data from a CSV file and output to a JSON file. There are instructions towards the bottom of this document explaining how to use the Docker containers, start the database, and use the examples.
+## Components
 
-## Background
+### Main Scripts
 
-We have provided a Github repo containing:
+- `run_etl.py`: Main orchestration script that executes the entire pipeline
+- `ingest.py`: Handles the data ingestion process
+- `process.py`: Processes the CSV files and loads them into the database
+- `analysis.py`: Executes analytical queries and saves the results to JSON
 
-- A **docker compose.yml** file that configures a container for the MySQL database, and the example scripts’ containers.
-- An **images** folder containing example programmes showing how the database can be accessed from C, Node, Python, R, Ruby, and Swift.
-- An **example_schema.sql** file containing a table schema used by the example scripts.
-- A **data** folder containing four files:
-  - **example.csv** A tiny dataset, used by the example scripts.
-  - **places.csv** 113 rows, where each row has a city, county, and country name.
-  - **people.csv** 10,000 rows, where each row has a first name, last name, date of birth, and city of birth.
-  - **sample_output.json** Sample output file, to show what your output should look like.
+### Utility Files
 
-## Problem
+- `utils/config.py`: Loads and processes configuration from YAML files with environment variable support
+- `utils/constants.py`: Imports configuration settings and makes them available to other modules
+- `utils/db_queries.py`: Contains SQL queries for table creation, deletion, and analysis
+- `config.yaml`: Configuration file for customizing pipeline parameters
 
-There are a sequence of steps that we would like you to complete. We hope this won't take more than a couple of hours of your time.
+### Docker Configuration
 
-1. Fork the git repo to your own Github account.
-2. Devise a database schema to hold the data in the people and places CSV files, and apply it to the MySQL database. You may apply this schema via a script, via the MySQL command-line client, or via a GUI client.
-3. Create a Docker image for loading the CSV files, places.csv and people.csv, into the tables you have created in the database. Make sure the appropriate config is in the docker compose file. Your data ingest process can be implemented in any way that you like, as long as it runs within a Docker container. You may implement this via programme code in a language of your choice, or via the use of ETL tools.
-4. Create a Docker image for outputting a summary of content in the database. You may implement this using a programming language of your choice. The output must be in JSON format, and be written to a file in the data folder called **data/summary_output.json**. It should consist of a list of the countries, and a count of how many people were born in that country. We have supplied a sample output **data/sample_output.json** to compare your file against.
-5. Share a link to your cloned github repo with us so we can review your code ahead of your interview.
+- `docker-compose.yml`: Defines and configures the multi-container Docker application
+- `Dockerfile`: (Referenced in docker-compose.yml) Defines the loader container
+- `Makefile`: Provides convenient shortcuts for Docker and ETL operations
 
-We have provided an example schema and code that shows how to handle a simple data ingest and output.
+## Configuration System
 
-Details of how to run and connect to the database are below, together with how to use the example schema and code.
+The project uses a YAML-based configuration system that provides:
 
-### Notes on completing these tasks
+1. **Centralized Configuration**: All settings in one place
+2. **Environment Variable Support**: Use `${VARIABLE_NAME:-default_value}` syntax to override settings with environment variables
+3. **Fallback Defaults**: In case of missing configuration file or errors
+4. **Separation of Concerns**: file paths, and database settings are organized in separate sections
 
-- There is no right way to do this. We are interested in the choices that you make, how you justify them, and your development process.
-- Consider how normalized your schema should be, and whether or not you should be using foreign keys to join tables.
-- When you create a container, make sure that you add the container config to the docker compose.yml file, and add your Dockerfile and code to the images folder.
-- Make sure that your code is executable, and if you are working in a scripting language, make sure that your script has an appropriate “hash-bang” line (as featured in our example scripts).
-- Most of the example code uses ORM libraries to connect to the database. This is _not_ essential for the purpose of this test: your code should connect to the database and your queries should be implemented in whatever way you are most comfortable with.
-- Consider what kind of error handling and testing is appropriate.
-- All data input, storage, and output should be in UTF-8. Expect multi-byte characters in the data.
-- The MySQL database storage is ephemeral; it will not persist, so make sure all schema and data queries are repeatable.
-- You may find it easier to work with a subset of the data when developing your ingest.
+Example configuration file:
 
-## Notes on using the images in the git repo
+```yaml
+# Database Configuration
+database:
+  host: ${DATABASE_HOST:-database}
+  user: ${DATABASE_USER:-codetest}
+  password: ${DATABASE_PASSWORD:-swordfish}
+  name: ${DATABASE_NAME:-codetest}
 
-### Requirements
-
-Make sure you have recent versions of Docker and Docker Compose.
-
-### Building the images
-
-This will build all of the images referenced in the Docker Compose file. You will need to re-run this after making code changes. (You can also specify individual services to build if that is more convenient.)
+# File Paths
+paths:
+  raw_folder: /data/raw
+  ingest_folder: /data/fetch
+  # Additional paths...
 
 ```
-docker compose build
+
+## Container Infrastructure
+
+The application is fully containerized with two main services:
+
+1. **Database Service**:
+   - Uses MySQL 8.0
+   - Configured with custom authentication settings
+   - Non-persistent storage for clean runs each time
+   - Pre-configured database named `codetest`
+   - Initialized with custom SQL setup script
+
+2. **Loader Service**:
+   - Custom built from the Dockerfile
+   - Mounts source code and data directories as volumes
+   - Configured with environment variables for database connection
+   - Depends on the database service
+
+## Data Flow
+
+1. Raw CSV files containing 'people' and 'places' data are copied from `/data/raw` to `/data/fetch`
+2. The pipeline connects to the MySQL database container using environment variables
+3. CSV files are processed and loaded into 'people' and 'places' tables
+4. A SQL query calculates population counts by country
+5. Results are saved to a JSON file (`output.json`)
+
+## Implementation Details
+
+### Ingestion Stage
+
+The ingestion process:
+- Checks for CSV files in the source directory that contain 'people' or 'places' in their names
+- Copies these files to the destination directory
+- Creates metadata to track the ingestion process
+
+### Process Stage
+
+The process stage:
+- Reads the ingested CSV files
+- Performs basic data cleaning (removing duplicates)
+- Loads the data into MySQL tables
+- Creates metadata to track the processing status
+
+### Analysis Stage
+
+The analysis stage:
+- Executes an SQL query that joins the 'people' and 'places' tables
+- Calculates population by country (counting unique people by place of birth)
+- Saves the results to a JSON file
+- Creates metadata to track the analysis process
+
+### Error Handling
+
+Each component includes error handling to:
+- Log errors
+- Create metadata files with failure status when errors occur
+- Check for successful completion of previous stages
+
+### Non-Persistent Database
+
+The database is configured with non-persistent storage, which means:
+- Each run starts with a clean database state
+- No data is retained between container restarts or removals
+- The database is initialized using the setup.sql script on each startup
+- This configuration ensures consistent and reproducible results for each ETL run
+
+## Setup and Execution
+
+### Prerequisites
+
+- Docker and Docker Compose
+- Git (for cloning the repository)
+- Make (optional, for using the provided Makefile commands)
+
+### Directory Structure
+
+```
+/
+├── src/                # Source code directory
+│   └── app/            # ETL scripts
+├── utils/              # Utility modules
+│   ├── config.py       # Configuration loader
+│   ├── constants.py    # Configuration constants
+│   └── db_queries.py   # Database queries
+│   └── config.yaml     # Main configuration file
+├── data/
+│   ├── raw/            # Source directory for raw CSV files
+│   ├── fetch/          # Destination for ingested files and metadata
+│   ├── process/        # Process stage metadata
+│   └── analysis/       # Analysis stage metadata and results
+├── containers/
+│   └── loader/
+│       └── Dockerfile  # Dockerfile for the loader service
+├── .docker/
+│   └── setup.sql       # Database initialization script
+├── docker-compose.yml  # Docker Compose configuration
+└── Makefile            # Convenience commands for Docker operations
 ```
 
-### Starting MySQL
+### Configuration Customization
 
-To start up the MySQL database. This will will take a short while to run the database’s start-up scripts.
+To customize the ETL pipeline:
 
+1. Edit the `config.yaml` file to change file paths, database settings, or SQL queries
+2. Set environment variables to override configuration values when needed
+3. For container-level changes, modify the `docker-compose.yml` file
+
+### Running the Pipeline
+
+#### Using Make Commands
+
+The project includes a Makefile with convenient shortcuts:
+
+```bash
+# Start the containers in detached mode and build if necessary
+make up
+
+# Run the ETL pipeline
+make run-etl
+
+# View container logs
+make logs
+
+# Open a shell in the loader container
+make sh
+
+# Restart containers
+make restart
+
+# Stop and remove containers
+make down
 ```
-docker compose up database
+
+#### Using Docker Compose Directly
+
+If you prefer not to use Make, you can use Docker Compose commands directly:
+
+```bash
+# Start the containers
+docker-compose up --build -d
+
+# Run the ETL pipeline
+docker exec test-data-engineering-loader-1 python3 src/app/run_etl.py
+
+# View logs
+docker-compose logs -f
 ```
 
-Optional: if you want to connect to the MySQL database via the command-line client. This may be useful for looking at the database schema or data.
+### Environment Variables
 
-```
-docker compose run database mysql --host=database --user=codetest --password=swordfish codetest
-```
+The following environment variables can be used to override configuration values:
+- `DATABASE_HOST`: Host name of the database (default: database)
+- `DATABASE_USER`: Database user name (default: codetest)
+- `DATABASE_PASSWORD`: Database password (default: swordfish)
+- `DATABASE_NAME`: Database name (default: codetest)
 
-### Example scripts
+Additional environment variables can be defined in the configuration file as needed.
 
-We have provided example code written in C, Node, Python, R, Ruby, and Swift. These show how to use a programme in a separate Docker container to connect to the database, using an ORM library where appropriate, to load data from a CSV file, and to query data to output as a JSON file. There should be regarded as illustrative; it is fine to use any of these examples as the basis of your own solution, but we would prefer that you use technologies that you feel comfortable with.
+## Future Improvements
 
-Make sure the MySQL database is running, and then load the example schema with:
-
-```
-docker compose run --no-TTY database mysql --host=database --user=codetest --password=swordfish codetest <example_schema.sql
-```
-
-Then make sure that the containers have been built with `docker compose build` and run one or more of the sample programmes with:
-
-```
-docker compose run example-c
-docker compose run example-node
-docker compose run example-python
-docker compose run example-r
-docker compose run example-ruby
-docker compose run example-swift
-```
-
-In each case, the programme loads data from the data/example.csv file into that table, and exports data from the database table to a JSON file in the data folder. Note that the scripts do not truncate the table, so each one you run will add additional content.
-
-### Cleaning up
-
-To tidy up, bringing down all the containers and deleting them.
-
-```
-docker compose down
-```
+1. Add data validation and quality checks
+2. Implement more robust error recovery mechanisms
+3. Add logging to a centralized system
+4. Implement parallel processing for larger datasets
+5. Add unit and integration tests
+6. Implement incremental loading for efficiency
+7. Expand configuration options for more flexibility
+8. Implement a health check for the database container before starting the ETL process
+9. Add a visualization layer for the population data
+10. Implement CI/CD pipeline for automated testing and deployment
+11. Add option for persistent storage when needed for development purposes

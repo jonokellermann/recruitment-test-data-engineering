@@ -1,0 +1,8 @@
+{
+    "status": "completed",
+    "tables_processed": 2,
+    "table_names": [
+        "people.csv",
+        "places.csv"
+    ]
+}

@@ -1,0 +1,27 @@
+# Database Configuration
+database:
+  host: ${DATABASE_HOST:-database}
+  user: ${DATABASE_USER:-codetest}
+  password: ${DATABASE_PASSWORD:-swordfish}
+  name: ${DATABASE_NAME:-codetest}
+
+# File Paths
+paths:
+  raw_folder: /data/raw
+  ingest_folder: /data/fetch
+  ingest_metadata: /data/fetch/fetch_metadata.json
+  process_metadata: /data/process/process_metadata.json
+  process_folder: /data/process
+  analysis_metadata: /data/analysis/analysis_metadata.json
+  query_result: output.json
+
+# Query Configuration
+queries:
+  population_query: >
+    SELECT
+        pl.country as country,
+        COUNT(p.given_name) as population
+    FROM 
+        (SELECT DISTINCT city, county, country FROM places) AS pl
+        LEFT JOIN (SELECT DISTINCT given_name,family_name,date_of_birth,place_of_birth FROM people) AS p ON pl.city = p.place_of_birth
+    GROUP BY pl.country
