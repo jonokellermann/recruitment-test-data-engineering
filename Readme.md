@@ -1,5 +1,3 @@
-# Data Engineering Technical Assessment Submission
-
 ## Project Overview
 
 This project implements an ETL (Extract, Transform, Load) pipeline for processing population data. The pipeline extracts data from CSV files, processes them, loads them into a MySQL database, and finally performs an analysis to generate country population statistics. The entire solution is containerized using Docker for easy deployment and execution, with non-persistent database storage for clean runs and configuration file support for flexibility.
